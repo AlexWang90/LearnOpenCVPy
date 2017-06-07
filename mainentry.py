@@ -2,7 +2,6 @@ import os
 
 from myutil import stringutil
 from test import elegant_code_style
-from test.tts import test_gtts
 from myutil import configutil
 from myutil.logutil import LogUtil
 
@@ -20,7 +19,7 @@ def test_log():
     logger.debug("test_logger_debug")
     logger.warning("test_logger_warning")
 
-if __name__ == "__main__":
+def test():
     print(os.getcwd()) #取的是起始执行目录
 
     stringutil.test()
@@ -32,3 +31,7 @@ if __name__ == "__main__":
     elegant_code_style.test_zip()
     elegant_code_style.test_join()
     test_log()
+
+if __name__ == "__main__":
+    test()
+
