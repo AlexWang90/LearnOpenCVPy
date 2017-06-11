@@ -4,6 +4,7 @@ from myutil import stringutil
 from test import elegant_code_style
 from myutil import configutil
 from myutil.logutil import LogUtil
+from lopencv import feature_test
 
 logger = LogUtil()
 def test_config():
@@ -33,5 +34,5 @@ def test():
     test_log()
 
 if __name__ == "__main__":
-    test()
-
+    # test()
+    feature_test.test()
