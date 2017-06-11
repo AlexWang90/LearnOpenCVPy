@@ -14,3 +14,8 @@ def ext_orb_from_img(img, nFeatures = 500):
     kp = orb.detect(img,None)
     kp, des = orb.compute(img, kp)
     return kp, des
+
+def brute_force_match(des1, des2):
+    bf = cv2.BFMatcher(cv2.NORM_HAMMING, crossCheck=True)
+    matches = bf.match(des1,des2)
+    return matches
